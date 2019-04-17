@@ -40,8 +40,7 @@
         <module>spring-data-orientdb-graph</module>
         <module>spring-boot-orientdb-autoconfigure</module>
         <module>spring-data-orientdb-benchmarks</module>
-        <module>spring-data-orientdb-samples/spring-boot-orientdb-hello</module>
-        <module>spring-data-orientdb-samples/spring-boot-orientdb-shiro</module>
+        <module>mini_crm</module>
     </modules>
 
     <properties>
@@ -553,7 +552,6 @@
                                 <goal>shade</goal>
                             </goals>
                             <configuration>
-                                <finalName>${shaded.name}</finalName>
                                 <minimizeJar>false</minimizeJar>
                                 <transformers>
                                     <transformer
@@ -581,7 +579,6 @@
                                     <transformer
                                             implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                         <manifestEntries>
-                                            <Main-Class>${shaded.main}</Main-Class>
                                             <X-Compile-Source-JDK>${maven.compiler.source}</X-Compile-Source-JDK>
                                             <X-Compile-Target-JDK>${maven.compiler.target}</X-Compile-Target-JDK>
                                         </manifestEntries>
